@@ -1,16 +1,33 @@
-.rating-section {
-  padding: 8rem 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.rating-popup {
+  position: fixed;
+  bottom: 2rem;
+  right: 4rem; /* Adjusted right so it doesn't overlap the scrollbar tracker */
   background-color: var(--bg-white);
-  border-top: 1px solid var(--border-color);
+  padding: 2.5rem 3rem;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0,0,0,0.05); /* Soft, expensive drop shadow */
+  z-index: 9999;
+  max-width: 500px;
+}
+
+.rating-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.rating-close-btn:hover {
+  color: var(--text-primary);
 }
 
 .rating-container {
-  max-width: 800px;
   width: 100%;
-  min-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,36 +41,37 @@
 }
 
 .rating-title {
-  font-size: 3rem;
+  font-size: 1.75rem;
   font-weight: 500;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.5px;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .rating-subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 4rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .rating-options {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .rating-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 1.5rem;
-  border-radius: 24px;
+  padding: 1rem;
+  border-radius: 16px;
   transition: background 0.3s ease;
 }
 
@@ -70,20 +88,29 @@
 }
 
 .rating-emoji {
-  font-size: 3.5rem;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+  font-size: 2.5rem;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
 }
 
 .rating-text {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: var(--text-secondary);
   font-family: 'Inter', sans-serif;
 }
 
 .success-icon {
-  font-size: 5rem;
+  font-size: 3rem;
   color: var(--accent-blue);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .rating-popup {
+    bottom: 2rem;
+    left: 1rem;
+    right: 1rem;
+    padding: 2rem;
+  }
 }
