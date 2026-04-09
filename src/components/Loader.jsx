@@ -2,23 +2,41 @@ import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Loader.css'
 
-const Loader = ({ onComplete }) => {
+const Loader = ({ assetsLoaded, onComplete }) => {
   const [progress, setProgress] = useState(0)
 
+  // Physics for filling the visual bar
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(interval)
-          setTimeout(() => onComplete(), 500) // slight pause at 100 before clearing
-          return 100
-        }
-        // Jump around for interesting fake loading texture
-        return prev + Math.floor(Math.random() * 20) + 5
-      })
-    }, 150)
-    return () => clearInterval(interval)
-  }, [onComplete])
+    let interval = null;
+
+    if (!assetsLoaded) {
+      // If assets are heavy/still downloading, fake the progress but stall at exactly 90%
+      interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 90) return 90;
+          return prev + Math.floor(Math.random() * 20) + 5
+        })
+      }, 150)
+    } else {
+      // Assets are ready natively from cache, punch it to 100% immediately!
+      clearInterval(interval)
+      setProgress(100)
+    }
+
+    return () => {
+      if (interval) clearInterval(interval)
+    }
+  }, [assetsLoaded])
+
+  // Triggers the dismissal of the layer once 100% is securely reached
+  useEffect(() => {
+    if (progress === 100 && assetsLoaded) {
+      const timer = setTimeout(() => {
+        onComplete()
+      }, 500) // Small visual suspension at 100%
+      return () => clearTimeout(timer)
+    }
+  }, [progress, assetsLoaded, onComplete])
 
   return (
     <motion.div 

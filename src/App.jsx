@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence, useScroll } from 'framer-motion'
 import './App.css'
 
@@ -14,16 +14,42 @@ import Team from './sections/Team'
 import Footer from './sections/Footer'
 import ExperienceRating from './components/ExperienceRating'
 
+// Critical heavy assets that must be preloaded before showing the site
+import farmoRoverImg from './assets/images/farmo_rover.png'
+import waterModuleImg from './assets/images/module_water.png'
+import seedModuleImg from './assets/images/module_seed.png'
+
 function App() {
   const [loading, setLoading] = useState(true)
+  const [assetsLoaded, setAssetsLoaded] = useState(false)
   
   // Track continuous page scroll 0 -> 1 for the sidebar tracker
   const { scrollYProgress } = useScroll()
 
+  // Hardware Asset Preloader
+  useEffect(() => {
+    const criticalImages = [farmoRoverImg, waterModuleImg, seedModuleImg]
+    let loadedCount = 0
+
+    const checkAllLoaded = () => {
+      loadedCount++
+      if (loadedCount === criticalImages.length) {
+        setAssetsLoaded(true)
+      }
+    }
+
+    criticalImages.forEach(src => {
+      const img = new Image()
+      img.src = src
+      img.onload = checkAllLoaded
+      img.onerror = checkAllLoaded // We proceed even if one asset fails to prevent locking the screen forever
+    })
+  }, [])
+
   return (
     <>
       <AnimatePresence>
-        {loading && <Loader key="loader" onComplete={() => setLoading(false)} />}
+        {loading && <Loader key="loader" assetsLoaded={assetsLoaded} onComplete={() => setLoading(false)} />}
       </AnimatePresence>
 
       {!loading && (
