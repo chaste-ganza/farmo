@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion'
-import farmoRoverImg from '../assets/images/farmo_rover.png'
+import farmoRoverImg from '../assets/images/make_the_sketch_be_in_the_center_of_the_picture_frame_20260409123944_02.png'
 import './Hero.css'
 
 const Hero = () => {

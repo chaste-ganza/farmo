@@ -16,37 +16,6 @@
   z-index: 50;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
-  transition:
-    width 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.scroll-tracker-wrapper.is-expanded {
-  width: min(28rem, calc(100vw - 3rem));
-  transform: translateY(calc(-50% + 2.2rem));
-}
-
-.scroll-tracker-panel {
-  flex: 1;
-  min-width: 0;
-  opacity: 0;
-  transform: translateX(1rem);
-  pointer-events: none;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(10, 10, 10, 0.08);
-  box-shadow: 0 24px 60px -34px rgba(15, 23, 42, 0.28);
-  transition:
-    opacity 0.35s ease,
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.scroll-tracker-wrapper.is-expanded .scroll-tracker-panel {
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
 }
 
 .scroll-tracker-track {
@@ -70,11 +39,6 @@
     right: 1rem;
     height: 150px;
     width: 3px;
-  }
-
-  .scroll-tracker-wrapper.is-expanded {
-    width: calc(100vw - 2rem);
-    transform: translateY(calc(-50% + 1.8rem));
   }
 
   .scroll-tracker-track {

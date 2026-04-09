@@ -1,6 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import './Team.css'
+import chaste from '../assets/images/chaste.png'
+import stella from '../assets/images/stella.png'
+import honore from '../assets/images/honore.png'
+import flora from '../assets/images/flora.png'
+import blaise from '../assets/images/blaise.png'
+
+
 
 const Team = () => {
   const teamMembers = [
@@ -9,7 +16,7 @@ const Team = () => {
       name: 'Ganza M. Chaste',
       role: 'Nano Robotics Team Member',
       bio: 'Part of the 5-student Nano Robotics team contributing to the design, development, and testing of the modular rover system.',
-      imageUrl: 'https://i.pravatar.cc/300?img=47',
+      imageUrl: chaste,
       socialPrimary: 'ROBOTICS',
       socialSecondary: 'TEAMWORK',
     },
@@ -18,7 +25,7 @@ const Team = () => {
       name: 'Mizero Nancy Stella',
       role: 'Nano Robotics Team Member',
       bio: 'Contributing to system integration, practical prototyping, and the collaborative development of the rover platform.',
-      imageUrl: 'https://i.pravatar.cc/300?img=11',
+      imageUrl: stella,
       socialPrimary: 'EMBEDDED SYSTEMS',
       socialSecondary: 'PROTOTYPING',
     },
@@ -27,7 +34,7 @@ const Team = () => {
       name: 'Niyogushimwa Honore',
       role: 'Nano Robotics Team Member',
       bio: 'Focused on building reliable subsystems and supporting the rover’s modular design for real-world testing.',
-      imageUrl: 'https://i.pravatar.cc/300?img=5',
+      imageUrl: honore,
       socialPrimary: 'MECHANICAL DESIGN',
       socialSecondary: 'TESTING',
     },
@@ -36,7 +43,7 @@ const Team = () => {
       name: 'Ihozo Raissa Flora',
       role: 'Nano Robotics Team Member',
       bio: 'Supporting the team through problem solving, assembly, and refinement of the rover’s functional modules.',
-      imageUrl: 'https://i.pravatar.cc/300?img=12',
+      imageUrl: flora,
       socialPrimary: 'SYSTEM INTEGRATION',
       socialSecondary: 'COLLABORATION',
     },
@@ -45,7 +52,7 @@ const Team = () => {
       name: 'Isingizwe Kwizera Blaise',
       role: 'Nano Robotics Team Member',
       bio: 'Helping shape the project through iterative development, field-oriented thinking, and hands-on engineering work.',
-      imageUrl: 'https://i.pravatar.cc/300?img=15',
+      imageUrl: blaise,
       socialPrimary: 'FIELD DESIGN',
       socialSecondary: 'ENGINEERING',
     },

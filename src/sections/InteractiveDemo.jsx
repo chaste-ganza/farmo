@@ -32,7 +32,7 @@ const InteractiveDemo = () => {
             >
               <PlayCircle size={80} className="play-icon" />
             </motion.div>
-            <p className="placeholder-note">(3D interactive model / simulation will be integrated here)</p>
+            <p className="placeholder-note">3D interactive model / simulation will be integrated here</p>
           </div>
         </motion.div>
       </div>

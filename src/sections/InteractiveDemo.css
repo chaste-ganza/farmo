@@ -70,7 +70,6 @@
   opacity: 0.8;
   cursor: pointer;
   transition: color 0.3s ease, opacity 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.5));
 }
 
 .play-icon:hover {
@@ -82,8 +81,8 @@
   position: absolute;
   bottom: 2rem;
   font-family: monospace;
-  color: var(--text-secondary);
-  opacity: 0.5;
+  color: white;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

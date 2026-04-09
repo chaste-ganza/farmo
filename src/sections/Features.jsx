@@ -2,6 +2,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import feat1Img from '../assets/images/module_water.png'
 import feat2Img from '../assets/images/module_seed.png'
+import feat3Img from '../assets/images/BCO.6bbcf7cc-f92a-4bf0-9686-44dae3429c04.png'
+import feat4Img from '../assets/images/from_the_sketch_I_want_you_to_generate_centered_robot_from_the_sketch_and_with_20260409123750_01.png'
+import feat5Img from '../assets/images/BCO.8cc67f70-262f-4c39-aa58-6bb57ef7314f.png'
 import './Features.css'
 
 const Features = () => {
@@ -9,25 +12,25 @@ const Features = () => {
     {
       title: '6-wheel terrain mobility',
       tags: 'SYSTEM HIGHLIGHT',
-      img: feat1Img,
+      img: feat3Img,
       link: '#',
     },
     {
       title: 'Modular attachment system',
       tags: 'SYSTEM HIGHLIGHT',
-      img: feat2Img,
+      img: feat1Img,
       link: '#',
     },
     {
       title: 'Real-world agricultural application',
       tags: 'SYSTEM HIGHLIGHT',
-      img: feat1Img,
+      img: feat5Img,
       link: '#',
     },
     {
       title: 'Expandable and upgradeable design',
       tags: 'SYSTEM HIGHLIGHT',
-      img: feat2Img,
+      img: feat4Img,
       link: '#',
     },
   ]

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import farmoRoverImg from '../assets/images/farmo_rover.png'
+import farmoRoverImg from '../assets/images/f1d5ef57-ecbc-4054-8f6b-0e4b418e7077.jpg'
 import './Overview.css'
 
 const Overview = () => {

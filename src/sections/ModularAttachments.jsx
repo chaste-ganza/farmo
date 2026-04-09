@@ -1,7 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import waterModuleImg from '../assets/images/module_water.png'
-import seedModuleImg from '../assets/images/module_seed.png'
+import waterModuleImg from '../assets/images/Copilot_20260409_144930.png'
+import seedModuleImg from '../assets/images/Copilot_20260409_145612.png'
+import carryModuleImg from '../assets/images/BCO.9077a339-0288-4d7e-abd2-efcc0966de69.png'
 import './ModularAttachments.css'
 
 const ModularAttachments = () => {
@@ -22,7 +23,7 @@ const ModularAttachments = () => {
       id: "carry",
       name: "Carrying Module",
       desc: "Lightweight payload platform for transporting small tools, materials, or additional components.",
-      img: waterModuleImg // Re-using image proxy for now
+      img: carryModuleImg // Re-using image proxy for now
     }
   ];
 
