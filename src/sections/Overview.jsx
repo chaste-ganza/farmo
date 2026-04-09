@@ -16,17 +16,8 @@ const Overview = () => {
   const imageOffset = useTransform(scrollYProgress, [0, 1], [-20, 20])
 
   return (
-    <section ref={ref} className="panoramic-overview-section">
+    <section id="overview" ref={ref} className="panoramic-overview-section">
       <div className="pan-header-container">
-        <motion.p
-          className="pan-eyebrow"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          OUR APPROACH
-        </motion.p>
         <motion.h2 
           className="pan-title"
           style={{ y: textOffset }}
@@ -35,7 +26,7 @@ const Overview = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          We combine mechanical design, embedded systems, and modular engineering to build a robotic platform that adapts to different tasks instead of being limited to one function.
+          
         </motion.h2>
       </div>
 
@@ -53,11 +44,7 @@ const Overview = () => {
       </div>
 
       <div className="pan-footer">
-        <span className="pan-plus">+</span>
-        <span className="pan-plus">+</span>
         <span className="pan-scroll-txt">SCROLL TO EXPLORE</span>
-        <span className="pan-plus">+</span>
-        <span className="pan-plus">+</span>
       </div>
     </section>
   )

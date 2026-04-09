@@ -39,7 +39,7 @@ const SystemBreakdown = () => {
   ];
 
   return (
-    <section className="system-section">
+    <section id="core-architecture" className="system-section">
       <div className="system-header">
         <h2 className="section-title">Core Architecture</h2>
         <p className="system-subtitle">Engineered for stability, adaptability, and real-world prototyping.</p>
@@ -54,6 +54,7 @@ const SystemBreakdown = () => {
       >
         {systems.map((sys) => (
           <motion.div key={sys.id} variants={itemVariants} className="system-card pill-panel">
+            <div className="system-expand-orb" aria-hidden="true"></div>
             <div className="icon-container">
               {sys.icon}
             </div>

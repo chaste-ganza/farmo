@@ -26,7 +26,7 @@ const BuildProcess = () => {
   ];
 
   return (
-    <section className="timeline-section">
+    <section id="development-journey" className="timeline-section">
       <h2 className="section-title text-gradient text-center">Development Journey</h2>
       
       <div className="timeline">

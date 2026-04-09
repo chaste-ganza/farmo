@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence, useScroll } from 'framer-motion'
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion'
 import './App.css'
 
 import Loader from './components/Loader'
@@ -23,9 +23,14 @@ import seedModuleImg from './assets/images/module_seed.png'
 function App() {
   const [loading, setLoading] = useState(true)
   const [assetsLoaded, setAssetsLoaded] = useState(false)
+  const [trackerExpanded, setTrackerExpanded] = useState(false)
   
   // Track continuous page scroll 0 -> 1 for the sidebar tracker
   const { scrollYProgress } = useScroll()
+
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    setTrackerExpanded(latest > 0.985)
+  })
 
   // Hardware Asset Preloader
   useEffect(() => {
@@ -62,7 +67,10 @@ function App() {
         >
           <Navbar />
           {/* Peripheral Right-Aligned Scroll Tracker */}
-          <div className="scroll-tracker-wrapper">
+          <div className={`scroll-tracker-wrapper ${trackerExpanded ? 'is-expanded' : ''}`}>
+            <div className="scroll-tracker-panel">
+              <ExperienceRating dockedOpen={trackerExpanded} />
+            </div>
             <div className="scroll-tracker-track">
               <motion.div 
                 className="scroll-tracker-fill" 
@@ -71,15 +79,15 @@ function App() {
             </div>
           </div>
 
-          <Hero />
+          
           <Overview />
+          <Hero />
           <SystemBreakdown />
           <ModularAttachments />
           <InteractiveDemo />
           <BuildProcess />
           <Features />
           <Team />
-          <ExperienceRating />
           <Footer />
         </motion.div>
       )}

@@ -27,7 +27,7 @@ const ModularAttachments = () => {
   ];
 
   return (
-    <section className="modules-section">
+    <section id="modular-ecosystem" className="modules-section">
       <div className="modules-bg-glow"></div>
       
       <div className="modules-header">
@@ -48,7 +48,7 @@ const ModularAttachments = () => {
             <div className="module-text-content">
               <h3 className="module-title">{mod.name}</h3>
               <p className="module-desc">{mod.desc}</p>
-              <button className="pill-btn dark">View Specs</button>
+              <button className="pill-btn dark"><span>View Specs</span></button>
             </div>
             
             <div className="module-visual">

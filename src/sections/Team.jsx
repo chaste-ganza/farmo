@@ -6,7 +6,7 @@ const Team = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Student 1',
+      name: 'Ganza M. Chaste',
       role: 'Nano Robotics Team Member',
       bio: 'Part of the 5-student Nano Robotics team contributing to the design, development, and testing of the modular rover system.',
       imageUrl: 'https://i.pravatar.cc/300?img=47',
@@ -15,7 +15,7 @@ const Team = () => {
     },
     {
       id: 2,
-      name: 'Student 2',
+      name: 'Mizero Nancy Stella',
       role: 'Nano Robotics Team Member',
       bio: 'Contributing to system integration, practical prototyping, and the collaborative development of the rover platform.',
       imageUrl: 'https://i.pravatar.cc/300?img=11',
@@ -24,7 +24,7 @@ const Team = () => {
     },
     {
       id: 3,
-      name: 'Student 3',
+      name: 'Niyogushimwa Honore',
       role: 'Nano Robotics Team Member',
       bio: 'Focused on building reliable subsystems and supporting the rover’s modular design for real-world testing.',
       imageUrl: 'https://i.pravatar.cc/300?img=5',
@@ -33,7 +33,7 @@ const Team = () => {
     },
     {
       id: 4,
-      name: 'Student 4',
+      name: 'Ihozo Raissa Flora',
       role: 'Nano Robotics Team Member',
       bio: 'Supporting the team through problem solving, assembly, and refinement of the rover’s functional modules.',
       imageUrl: 'https://i.pravatar.cc/300?img=12',
@@ -42,7 +42,7 @@ const Team = () => {
     },
     {
       id: 5,
-      name: 'Student 5',
+      name: 'Isingizwe Kwizera Blaise',
       role: 'Nano Robotics Team Member',
       bio: 'Helping shape the project through iterative development, field-oriented thinking, and hands-on engineering work.',
       imageUrl: 'https://i.pravatar.cc/300?img=15',
@@ -75,7 +75,7 @@ const Team = () => {
   }
 
   return (
-    <section className="team-section">
+    <section id="team" className="team-section">
       <div className="team-header">
         <h2 className="section-title">Nano Robotics</h2>
         <p className="team-subtitle">
@@ -94,9 +94,6 @@ const Team = () => {
           <motion.div key={member.id} variants={cardVariants} className="team-card">
             <div className="team-image-wrapper">
               <img src={member.imageUrl} alt={member.name} className="team-image" />
-              <div className="image-overlay">
-                <button className="pill-btn dark small">TEAM MEMBER</button>
-              </div>
             </div>
 
             <div className="team-info">

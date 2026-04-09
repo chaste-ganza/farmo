@@ -4,7 +4,7 @@ import farmoRoverImg from '../assets/images/farmo_rover.png'
 import './Hero.css'
 
 const Hero = () => {
-  const sentence = "Modular Agricultural Rover\nA 6-wheel adaptive robotic platform for terrain and plant care"
+  const sentence = "What we did"
   const words = sentence.split('\n')
 
   const x = useMotionValue(0)
@@ -22,7 +22,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="hero-section" onMouseMove={handleMouseMove}>
+    <section id="what-we-did" className="hero-section" onMouseMove={handleMouseMove}>
       <div className="hero-content">
         
         <div className="hero-top">
@@ -67,7 +67,8 @@ const Hero = () => {
             </p>
             <div style={{ display: 'flex' }}>
               <button className="nav-pill" style={{ backgroundColor: '#fff', border: '1px solid #e5e7eb' }}>
-                <span className="nav-dot" style={{ backgroundColor: '#000' }}></span> OUR APPROACH
+                <span className="nav-dot" style={{ backgroundColor: '#000' }}></span>
+                <span className="button-label">OUR APPROACH</span>
               </button>
             </div>
           </motion.div>

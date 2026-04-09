@@ -4,7 +4,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer className="footer-section">
+    <footer id="footer" className="footer-section">
       <div className="footer-content">
         <div className="footer-left">
           <h2 className="footer-logo text-gradient">FARMO</h2>
@@ -20,7 +20,7 @@ const Footer = () => {
             <a href="#" className="social-link"><Share2 size={20} /></a>
           </div>
           <div className="contact-link">
-            <a href="mailto:hello@farmo-robotics.xyz" className="pill-btn dark footer-btn">Contact Us</a>
+            <a href="mailto:hello@farmo-robotics.xyz" className="pill-btn dark footer-btn"><span>Contact Us</span></a>
           </div>
         </div>
       </div>

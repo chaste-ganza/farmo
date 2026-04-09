@@ -1,5 +1,6 @@
 .panoramic-overview-section {
-  padding: 8rem 2%;
+  padding: 8.75rem 2.5% 3rem;
+  padding-top: 17vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -10,36 +11,32 @@
 
 .pan-header-container {
   width: 100%;
-  max-width: 900px;
-  text-align: center;
-  margin-bottom: 6rem;
+  max-width: 1800px;
+  padding-left: clamp(15rem, 23vw, 28rem);
+  padding-right: clamp(16rem, 20vw, 24rem);
+  margin-bottom: 2.75rem;
   z-index: 10;
 }
 
-.pan-eyebrow {
-  margin: 0 0 1.25rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: rgba(17, 24, 39, 0.72);
-}
-
 .pan-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(2.8rem, 4.4vw, 5rem);
   font-weight: 500;
-  letter-spacing: -1.5px;
-  line-height: 1.2;
+  letter-spacing: -0.045em;
+  line-height: 1.06;
   color: var(--text-primary);
 }
 
 .pan-image-container {
-  width: 90%;
+  width: 90vw;
+  height: 70vh;
   display: flex;
   justify-content: center;
 }
 
 .pan-image-wrapper {
-  width: 96vw;
+  width: min(100%, 1725px);
   aspect-ratio: 21 / 9;
   border-radius: 24px;
   overflow: hidden;
@@ -57,33 +54,62 @@
 .pan-footer {
   width: 95vw;
   margin-top: 2rem;
-  padding: 1rem 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-bottom: 1em;
+  justify-content: center;
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.pan-plus {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: var(--text-primary);
-}
 
 .pan-scroll-txt {
   font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
   color: var(--text-primary);
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
+  .panoramic-overview-section {
+    padding-top: 8rem;
+  }
+
+  .pan-header-container {
+    padding-left: clamp(8rem, 14vw, 12rem);
+    padding-right: clamp(8rem, 12vw, 10rem);
+  }
+
+  .pan-title {
+    font-size: clamp(2.35rem, 5vw, 3.5rem);
+  }
+
   .pan-image-wrapper {
     aspect-ratio: 16 / 9;
   }
 }
+
 @media (max-width: 768px) {
+  .panoramic-overview-section {
+    padding: 6.5rem 1.25rem 2rem;
+  }
+
+  .pan-header-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .pan-title {
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.08;
+  }
+
   .pan-image-wrapper {
     aspect-ratio: 4 / 3;
+  }
+
+  .pan-footer {
+    width: 100%;
   }
 }

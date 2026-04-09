@@ -33,7 +33,7 @@ const Features = () => {
   ]
 
   return (
-    <section className="featured-work-section">
+    <section id="system-highlights" className="featured-work-section">
       <div className="fw-header">
         <h2 className="fw-main-title">System Highlights</h2>
         <p className="fw-subtitle">

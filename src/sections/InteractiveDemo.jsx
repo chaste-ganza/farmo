@@ -5,7 +5,7 @@ import './InteractiveDemo.css'
 
 const InteractiveDemo = () => {
   return (
-    <section className="demo-section">
+    <section id="demo" className="demo-section">
       <div className="demo-container glass-panel">
         <motion.div 
           className="demo-header"
