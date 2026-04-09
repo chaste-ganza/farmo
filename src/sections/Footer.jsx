@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-left">
           <h2 className="footer-logo text-gradient">FARMO</h2>
           <p className="footer-bio">
-            Built by passionate roboticists pushing the boundaries of autonomous agriculture.
+            Built as a robotics project exploring modular design and adaptive systems for real-world environments.
           </p>
         </div>
         
@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Farmo Robotics Project. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Modular Rover Project</p>
         <div className="status-indicator">
           <span className="pulse-dot-small"></span>
           <span>Systems Online</span>

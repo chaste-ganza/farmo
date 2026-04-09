@@ -22,19 +22,19 @@ const SystemBreakdown = () => {
       id: 1,
       title: "Mobility",
       icon: <Move size={36} className="system-icon" />,
-      desc: "6-wheel adaptive suspension base capable of navigating 40-degree inclines."
+      desc: "6-wheel drive base designed for rough and uneven terrain, providing stability and improved traction across rocks, slopes, and irregular surfaces."
     },
     {
       id: 2,
       title: "Control",
       icon: <Cpu size={36} className="system-icon" />,
-      desc: "Local AI processing for autonomous pathfinding and obstacle avoidance."
+      desc: "Microcontroller-based system (Arduino/ESP32) managing movement, sensors, and module activation through efficient and reliable logic control."
     },
     {
       id: 3,
       title: "Docking",
       icon: <Layers size={36} className="system-icon" />,
-      desc: "Universal magnetic multi-port for hot-swapping modules securely."
+      desc: "Modular docking interface with guided alignment and quick-lock mechanisms, allowing fast and secure attachment swapping."
     }
   ];
 
@@ -42,7 +42,7 @@ const SystemBreakdown = () => {
     <section className="system-section">
       <div className="system-header">
         <h2 className="section-title">Core Architecture</h2>
-        <p className="system-subtitle">Engineered for extreme reliability and seamless adaptability.</p>
+        <p className="system-subtitle">Engineered for stability, adaptability, and real-world prototyping.</p>
       </div>
 
       <motion.div 

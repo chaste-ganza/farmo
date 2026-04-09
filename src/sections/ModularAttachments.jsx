@@ -9,19 +9,19 @@ const ModularAttachments = () => {
     {
       id: "water",
       name: "Watering Module",
-      desc: "Precision localized hydration with adjustable pressure sprayers and a 50L internal tank.",
+      desc: "Targeted watering system using a compact pump and adjustable nozzle for controlled plant hydration.",
       img: waterModuleImg
     },
     {
       id: "seed",
       name: "Seed Planting Module",
-      desc: "High-speed pneumatic seed drilling for flawless row planting at exact depths.",
+      desc: "Servo-based dispensing system designed to release seeds at specific positions with simple mechanical precision.",
       img: seedModuleImg
     },
     {
       id: "carry",
       name: "Carrying Module",
-      desc: "Robust flatbed payload tray handling up to 120kg of harvested crops or external batteries.",
+      desc: "Lightweight payload platform for transporting small tools, materials, or additional components.",
       img: waterModuleImg // Re-using image proxy for now
     }
   ];
@@ -32,7 +32,7 @@ const ModularAttachments = () => {
       
       <div className="modules-header">
         <h2 className="section-title text-gradient-green">Modular Ecosystem</h2>
-        <p className="modules-subtitle">Swap tools on the fly. No downtime.</p>
+        <p className="modules-subtitle">Swap tools depending on the task. One platform, multiple functions.</p>
       </div>
 
       <div className="modules-list">

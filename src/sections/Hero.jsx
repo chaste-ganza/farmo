@@ -4,7 +4,7 @@ import farmoRoverImg from '../assets/images/farmo_rover.png'
 import './Hero.css'
 
 const Hero = () => {
-  const sentence = "Bold Ideas,\nBrought to Life"
+  const sentence = "Modular Agricultural Rover\nA 6-wheel adaptive robotic platform for terrain and plant care"
   const words = sentence.split('\n')
 
   const x = useMotionValue(0)
@@ -60,7 +60,10 @@ const Hero = () => {
             transition={{ duration: 0.9, delay: 1.2, ease: "easeOut" }}
           >
             <p className="hero-paragraph">
-              We combine design, motion, 3D, and development to create agricultural experiences that feel visually striking and technically seamless. From concept launches to immersive autonomous fields, we build work that captures attention and invites interaction.
+              We design and build a modular robotic system capable of navigating rough environments and performing targeted agricultural tasks through interchangeable attachments.
+            </p>
+            <p className="hero-paragraph">
+              From concept to prototype, this project explores how robotics can simplify real-world field operations through adaptability and intelligent design.
             </p>
             <div style={{ display: 'flex' }}>
               <button className="nav-pill" style={{ backgroundColor: '#fff', border: '1px solid #e5e7eb' }}>

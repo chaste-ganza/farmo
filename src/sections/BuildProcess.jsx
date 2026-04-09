@@ -7,20 +7,20 @@ const BuildProcess = () => {
   const steps = [
     {
       id: 1,
-      title: "Prototyping",
-      desc: "Chassis design & kinematics testing.",
+      title: "Design & Prototyping",
+      desc: "Initial chassis design, wheel configuration, and structural testing.",
       icon: <Wrench size={24} />
     },
     {
       id: 2,
-      title: "Integration & Testing",
-      desc: "Sensor calibration and AI model training on field data.",
+      title: "System Integration",
+      desc: "Electronics setup, motor control, and sensor integration.",
       icon: <TestTube size={24} />
     },
     {
       id: 3,
-      title: "Field Deployment",
-      desc: "Live field trials showcasing autonomous navigation.",
+      title: "Testing & Demonstration",
+      desc: "Real-world testing on rough terrain and module-based task execution.",
       icon: <Rocket size={24} />
     }
   ];

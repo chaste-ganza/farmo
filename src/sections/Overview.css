@@ -16,6 +16,14 @@
   z-index: 10;
 }
 
+.pan-eyebrow {
+  margin: 0 0 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(17, 24, 39, 0.72);
+}
+
 .pan-title {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 500;
@@ -25,7 +33,7 @@
 }
 
 .pan-image-container {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
 }

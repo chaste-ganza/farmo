@@ -13,8 +13,8 @@ const InteractiveDemo = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title text-gradient">See Farmo in Action</h2>
-          <p className="demo-subtitle">Interactive WebGL Experience Loading...</p>
+          <h2 className="section-title text-gradient">See the Rover in Action</h2>
+          <p className="demo-subtitle">A real-time demonstration of movement, terrain handling, and modular interaction.</p>
         </motion.div>
 
         <motion.div 
@@ -32,7 +32,7 @@ const InteractiveDemo = () => {
             >
               <PlayCircle size={80} className="play-icon" />
             </motion.div>
-            <p className="placeholder-note">[ 3D Spline Interactive Environment Here ]</p>
+            <p className="placeholder-note">(3D interactive model / simulation will be integrated here)</p>
           </div>
         </motion.div>
       </div>
