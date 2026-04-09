@@ -20,15 +20,16 @@ const Footer = () => {
             <a href="#" className="social-link"><Share2 size={20} /></a>
           </div>
           <div className="contact-link">
-            <a href="mailto:hello@farmo-robotics.xyz" className="pill-btn dark footer-btn"><span>Contact Us</span></a>
+            <a href="mailto:gchaste23@gmail.com" className="pill-btn dark footer-btn"><span>Contact Us</span></a>
           </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Modular Rover Project</p>
-        <div className="status-indicator">
-          <span className="pulse-dot-small"></span>
-          <span>Systems Online</span>
+        <div className="nano-wordmark" aria-label="NANO">
+          <span className="nano-letter nano-letter-n">N</span>
+          <span className="nano-letter nano-letter-a">A</span>
+          <span className="nano-letter nano-letter-n2">N</span>
+          <span className="nano-letter nano-letter-o">O</span>
         </div>
       </div>
     </footer>

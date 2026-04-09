@@ -81,7 +81,7 @@ const Navbar = () => {
           }
           transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
         >
-          Meet <span style={{ color: '#56a2f6', fontSize: '35px' }}>Farmo</span> <br /> a modular farming robot that adapts to every task.
+          Meet <span style={{ color: 'rgb(51, 68, 244)', fontSize: '35px' }}>Farmo</span> <br /> a modular farming robot that adapts to every task.
         </motion.div>
         <div className="nav-actions">
           <button className="nav-pill dark" onClick={() => handleNavigate('team')}>
